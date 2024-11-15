@@ -41,7 +41,9 @@ An SAP Fiori application.
 
 
 #### Description :
- Created Library Management project using Differnt tables from the bakend to Fetch data.
- Created different views and the controllers in the Xml for Navigation Between tha pages and also created tables in the view to display the data in thetable.
- Controlles are used for validating the code and Complete operations done in the page .
-
+Initially Created Login Page With Validations for UserName And Password
+1. Created Library Management project using Differnt tables In ABAP  .
+2. Fetched data from the tables through odata services from the backend .
+3. Created different views and the controllers in the Xml for Navigation Between tha pages and also created tables in the view to display the data in thetable.
+4. Controlles are used for validating the code and Complete operations done in the page .
+ 
