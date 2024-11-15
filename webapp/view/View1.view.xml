@@ -1,0 +1,29 @@
+<mvc:View controllerName="library.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+<!-- Image id="_IDGenImage1" src="https://1.bp.blogspot.com/-51T3XfZ5lDU/YAM8YZ0sJUI/AAAAAAAADIA/7FFY9JwTw7Ie6ns2pby6Ig6fOXYlpSARQCLcBGAsYHQ/s0/thumbnail+2021-01-17.png"
+         / -->
+<FlexBox id="_IDGenFlexBox1" justifyContent="Center" alignItems="Center">
+<VBox id="_IDGenVBox1" alignItems="Center" width="100%">
+<Image id="hj" src="https://pngteam.com/images/staff-only-symbol-png-300x300_e598fa52_transparent_202562.png.png" width="200px"/>
+<!-- Button id="_IDGenButton1" icon="sap-icon://customer"/ -->
+<!-- Text id="_IDGenText1" text="login"  class="HeaderLabel sapUiSmallMargin" ></Text -->
+<HBox id="_IDGenHBox1">
+<Label id="_IDGenLabel1" text="User Name" width="100px" required="true"/>
+<Input id="usernameInput" width="200px" showClearIcon="true" valueState="Error" valueStateText="Name required"/>
+</HBox>
+<HBox id="_IDGenHx1">
+<Label id="_IDGenLal1" text="Password" width="100px" required="true"/>
+<Input id="passwordInput" width="200px" type="Password" showClearIcon="true" valueState="Error" valueStateText="Password required"/>
+</HBox>
+<FlexBox id="_IDGenFBox1" justifyContent="Center">
+<Button id="_IDGenButton2" text="login" type="Accept" class="sapUiSmallMargin" press="onLoginPress"/>
+<!-- Button id="_IDGenButt2"  text="Register" type="Accept" class="sapUiSmallMargin" press="onRegister"></Button -->
+</FlexBox>
+</VBox>
+</FlexBox>
+</content>
+    </Page>
+</mvc:View>

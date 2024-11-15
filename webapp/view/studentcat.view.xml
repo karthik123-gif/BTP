@@ -1,0 +1,107 @@
+<mvc:View
+    controllerName="library.controller.studentcat"
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns="sap.m">
+
+    <SplitContainer
+		id="SplitContDemo"
+		initialDetail="detail"
+		initialMaster="master">
+        <!-- Left Menu (Master Page) -->
+        <masterPages>
+            <Page id="menuPage" title="Menu"
+            backgroundDesign= "List" >
+            <List id="_IDGenList2">
+					<StandardListItem id="_IDGenStandardListItem5" title="To Main Menu" type="Navigation" press=".onPressGoToMaster" />
+				</List> 
+	</Page>
+			<Page
+				id="master2"
+				title="HOME"
+				backgroundDesign= "List"
+				showNavButton="true"
+				navButtonPress=".onPressMasterBack">
+				<List id="_IDGenList3" itemPress=".onListItemPress">
+					<StandardListItem id="_IDGenStandardListItem6" title="Student Category Registration" type="Active" custom:to="onCategoryRegistration" />
+					<StandardListItem id="_IDGenStandardListItem7" title="Student Registration" type="Active" custom:to="onStudentRegistration"/>
+					<StandardListItem id="_IDGenStandardListItem8"  title="Issue Books" type="Active" custom:to="onIssueBooks"  />
+				</List>
+			</Page>
+      </masterPages>
+                <!--content>
+                    <Button id="_IDGenButton4"
+                        icon="sap-icon://menu2"
+                        press=".onCollapseExpandPress" />
+                    <List id="_IDGenList1">
+                        <StandardListItem id="_IDGenStandardListItem1" title="Student Category Registration" type="Active" press="onCategoryRegistration" />
+                        <StandardListItem id="_IDGenStandardListItem2" title="Student Registration" type="Active" press="onStudentRegistration" />
+                        <StandardListItem id="_IDGenStandardListItem3" title="Issue Books" type="Active" press="onIssueBooks" />
+                        <StandardListItem id="_IDGenStandardListItem4" title="Return Books" type="Active" press="onReturnBooks" />
+                    </List>
+                </content>
+            </Page>
+        </masterPages-->
+
+        <!-- Main Content (Detail Page) -->
+        <detailPages>
+            <Page id="onCategoryRegistration" title="Student Category Registration" class="fade-in-animation" 
+            backgroundDesign= "Solid"
+            showNavButton="{= !${device>/system/desktop} }"	navButtonPress=".onPressDetailBack">
+                <content>
+                    <VBox id="_IDGenVBox1" fitContainer="true" class="slide-in-animation">
+                        <f:SimpleForm id="_IDGenSimpleForm1" 
+                            layout="ResponsiveGridLayout"
+                            editable="true"
+                            labelSpanM="3"
+                            columnsM="1"
+                            labelSpanL="4"
+                            columnsL="2"
+                            class="sapUiResponsiveMargin">
+
+                            <Label id="_IDGenLabel1" text="Student Category Registration" class="sapMTitle sapUiSmallMarginBottom"/>
+                            <Label id="_IDGenLabel2" text="Category ID" required="true"/>
+                            <Input id="categoryId" placeholder="Enter Category ID" width="50%" value="{formData>/categoryId}" />
+                            <Label id="_IDGenLabel3" text="Category" required="true"/>
+                            <Input id="category" placeholder="Enter Category" width="50%" value="{formData>/category}" />
+                            <Label id="_IDGenLabel4" text="Max Allowed"/>
+                            <Input id="maxAllowed" placeholder="Enter Max Allowed" type="Number" width="50%" value="{formData>/maxAllowed}" />
+                        </f:SimpleForm>
+                        <HBox id="_IDGenHBox1" justifyContent="Center" class="sapUiMediumMarginTop">
+                            <Button id="_IDGenButton1" text="Save" press="onSave" type="Emphasized" icon="sap-icon://save" class="fade-in-animation sapUiSmallMarginEnd"/>
+                            <Button id="_IDGenButton2" text="Reset" press="onReset" type="Default" icon="sap-icon://reset" class="fade-in-animation sapUiSmallMarginEnd"/>
+                            <Button id="_IDGenButton3" text="Cancel" press="onCancel" type="Reject" icon="sap-icon://decline" class="fade-in-animation"/>
+                        </HBox>
+                    </VBox>
+                </content>
+            </Page> 
+
+
+            	<Page
+				id="onStudentRegistration"
+				title="onStudentRegistration"
+				backgroundDesign= "Solid"
+				showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+				<VBox id="_IDGenVBox2" class="sapUiSmallMargin">
+					<Label id="_IDGenLabel5" text="This is Detail Page 2" />
+					<Text id="_IDGenText1" text="Here you could change the Split Application mode. After the mode change, resize the browser window to see the difference in the master form behaviour." />
+					<RadioButtonGroup id="_IDGenRadioButtonGroup1"
+						columns="1"
+						width="500px"
+						class="sapUiMediumMarginBottom"
+						select=".onPressModeBtn">
+						<buttons>
+							<RadioButton id="RB1-1" text="show/hide" selected="true" custom:splitAppMode="ShowHideMode" />
+							<RadioButton id="RB1-2" text="stretch/compress" custom:splitAppMode="StretchCompressMode" />
+							<RadioButton id="RB1-3" text="hide" custom:splitAppMode="HideMode" />
+							<RadioButton id="RB1-4" text="popover" custom:splitAppMode="PopoverMode" />
+						</buttons>
+					</RadioButtonGroup>
+				</VBox>
+			</Page>
+        </detailPages>
+   </SplitContainer>
+</mvc:View>
