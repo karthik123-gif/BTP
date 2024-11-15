@@ -40,3 +40,8 @@ An SAP Fiori application.
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
 
+#### Description :
+ Created Library Management project using Differnt tables from the bakend to Fetch data.
+ Created different views and the controllers in the Xml for Navigation Between tha pages and also created tables in the view to display the data in thetable.
+ Controlles are used for validating the code and Complete operations done in the page .
+
