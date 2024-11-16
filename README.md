@@ -41,8 +41,15 @@ An SAP Fiori application.
 
 
 #### Description :
-Initially Created Login Page With Validations for UserName And Password
-1. Created Library Management project using Differnt tables In ABAP  .
+THE MAIN AIM IS TO CREATE LIBRARY MANAGEMENT PROJECT
+
+Initially Created Login Page With Validations for UserName And Password.Here User Name and password Will Be "ADMIN" else the username and password will be 
+fetched from the backend table. here if the entered username and password matches the data in the backend then the login will be successful.
+
+Here the frontend page will be in the form of left menu to view the contents in the left menu . and each component will be having a different page in the 
+lest menu .
+## BREIF DESCRIPTION ON PROJECT
+1. Created Library Management project using Differnt tables In ABAP .
 2. Fetched data from the tables through odata services from the backend .
 3. Created different views and the controllers in the Xml for Navigation Between tha pages and also created tables in the view to display the data in thetable.
 4. Controlles are used for validating the code in the page .
